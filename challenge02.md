@@ -13,12 +13,17 @@ Stories
 
 
 1. 	Objects 				| Messages
+
 		Person 					|
+
 		Bike 						|
+
 		Docking Station | release_the_bike
 
 2.	Objects					| Messages
+
 		Person					|
+
 		Bike 						| is_working?
 
 
