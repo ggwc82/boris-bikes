@@ -1,0 +1,5 @@
+Object            Message
+Person
+Bike
+DockingStation    remaining_bikes
+                  charge

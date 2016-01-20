@@ -1,6 +1,6 @@
 describe 'Feature Tests' do
       docking_station = DockingStation.new
-      bike = docking_station.release_bike
+      bike =  Bike.new #docking_station.release_bike
       docked = docking_station.dock(bike)
 
   context 'User Stories - 1 Dock the Bike' do
@@ -11,6 +11,5 @@ describe 'Feature Tests' do
     it { expect(bike.docked?).to eq true }
 
     it { expect(docking_station.bike).to be_a Bike }
-    
   end
 end
