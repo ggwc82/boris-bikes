@@ -1,0 +1,10 @@
+Object            Message
+Person
+Bike      
+DockingStation    dock(bike)
+
+
+Object            Message
+Person
+Bike              is_docked?
+DockingStation    
