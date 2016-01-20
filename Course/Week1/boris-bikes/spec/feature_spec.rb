@@ -8,9 +8,15 @@ describe 'User Stories - 1 Dock the Bike' do
 end
 
 describe 'User Stories - 2 View docked status' do
+  docking_station = DockingStation.new
+  bike = docking_station.release_bike
+  
   it 'Checks docking status' do
-    docking_station = DockingStation.new
-    bike = docking_station.release_bike
-    expect(bike.is_docked?).to eq true
+    expect(bike.docked?).to eq true
   end
+
+  it 'checks for docked bikes' do
+    docking_station.dock(bike)
+    expect(docking_station.bike).to be_a Bike
+  end 
 end
