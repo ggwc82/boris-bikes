@@ -1,22 +1,16 @@
-describe 'User Stories - 1 Dock the Bike' do
-  it 'Docks the bike' do
-    docking_station = DockingStation.new
-    bike = docking_station.release_bike
-    docked = docking_station.dock(bike)
-    expect(docked).to be_a Bike
-  end
-end
+describe 'Feature Tests' do
+      docking_station = DockingStation.new
+      bike = docking_station.release_bike
+      docked = docking_station.dock(bike)
 
-describe 'User Stories - 2 View docked status' do
-  docking_station = DockingStation.new
-  bike = docking_station.release_bike
-  
-  it 'Checks docking status' do
-    expect(bike.docked?).to eq true
+  context 'User Stories - 1 Dock the Bike' do
+    it { expect(docked).to be_a Bike }
   end
 
-  it 'checks for docked bikes' do
-    docking_station.dock(bike)
-    expect(docking_station.bike).to be_a Bike
-  end 
+  context 'User Stories - 2 View docked status' do
+    it { expect(bike.docked?).to eq true }
+
+    it { expect(docking_station.bike).to be_a Bike }
+    
+  end
 end
